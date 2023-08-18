@@ -1,42 +1,67 @@
-<table>
-  <tr>
-    <td>Nested Table 1</td>
-    <td>Nested Table 2</td>
-  </tr>
-  <tr>
-    <td>
-      <table>
-        <tr>
-          <td>Column 1</td>
-          <td>Column 2</td>
-        </tr>
-        <tr>
-          <td>abc</td>
-          <td>def</td>
-        </tr>
-      </table>
-    </td>
-    <td>
-      <ul>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Nested Table 3</td>
-    <td>
-      <table>
-        <tr>
-          <td>Nested Table</td>
-          <td>Demo Continued</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td>Nested Table 4</td>
-    <td>HTML</td>
-  </tr>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .black-cell {
+    background-color: black;
+    color: white;
+  }
+</style>
+<title>Tables in Tables Example</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Nested Table 1</th>
+      <th>Nested Table 2</th>
+    </tr>
+    <tr>
+      <td rowspan="3">Row 1</td>
+      <td rowspan="2">Column 1</td>
+    </tr>
+    <tr>
+      <td>Column 2</td>
+    </tr>
+    <tr>
+      <td colspan="2">Row 2</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table>
+          <tr>
+            <th>List Header</th>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" class="black-cell">HTML</td>
+    </tr>
+  </table>
+</body>
+</html>
